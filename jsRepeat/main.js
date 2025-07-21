@@ -48,3 +48,27 @@ console.log(null === undefined); // false
 console.log("5" == 5); // true
 console.log("5" === 5); // false
 console.log("10" > 5); // true
+
+// tasks
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+} // 3 3 3
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+} // 0 1 2
+
+console.log([] + []); // ""
+console.log([] + {}); // [object Object]
+console.log({} + []); // 0
+console.log({} + {});
+("[object Object][object Object]");
+
+// --------------
+
+const a = { value: 10 };
+const b = a;
+a.value = 20;
+
+console.log(b.value); // 20
