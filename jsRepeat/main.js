@@ -67,8 +67,41 @@ console.log({} + {});
 
 // --------------
 
-const a = { value: 10 };
-const b = a;
-a.value = 20;
+// const a = { value: 10 };
+// const b = a;
+// a.value = 20;
 
-console.log(b.value); // 20
+// console.log(b.value); // 20
+
+// func
+
+function stringChanger(str) {
+  let result = "";
+
+  let letters = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"];
+
+  for (let i = 0; i < str.length; i++) {
+    if (letters.includes(str[i].toLowerCase())) {
+      result = result + str[i].toUpperCase();
+    } else {
+      result = result + str[i].toLowerCase();
+    }
+  }
+  return result;
+}
+
+console.log(stringChanger("Привет мир"));
+
+function removeWord(str) {
+  let result = [];
+
+  let arr = str.split(" ");
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i + 1]) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result.join(" ");
+}
